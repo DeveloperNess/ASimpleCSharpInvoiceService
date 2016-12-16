@@ -10,7 +10,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "InvoiceService", "src\InvoiceService\InvoiceService.xproj", "{F4B03D1B-2591-410F-BE13-6BAAC436B4D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestfulInvoiceService", "RestfulInvoiceService\RestfulInvoiceService.csproj", "{D768322A-5B56-4B62-B3E5-A026283C6144}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestfulInvoiceService.Tests", "RestfulInvoiceService.Tests\RestfulInvoiceService.Tests.csproj", "{48BD401A-EB49-4DEB-863F-2F7D26B6A1A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,15 +20,20 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F4B03D1B-2591-410F-BE13-6BAAC436B4D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F4B03D1B-2591-410F-BE13-6BAAC436B4D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F4B03D1B-2591-410F-BE13-6BAAC436B4D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F4B03D1B-2591-410F-BE13-6BAAC436B4D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D768322A-5B56-4B62-B3E5-A026283C6144}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D768322A-5B56-4B62-B3E5-A026283C6144}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D768322A-5B56-4B62-B3E5-A026283C6144}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D768322A-5B56-4B62-B3E5-A026283C6144}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48BD401A-EB49-4DEB-863F-2F7D26B6A1A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48BD401A-EB49-4DEB-863F-2F7D26B6A1A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48BD401A-EB49-4DEB-863F-2F7D26B6A1A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48BD401A-EB49-4DEB-863F-2F7D26B6A1A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{F4B03D1B-2591-410F-BE13-6BAAC436B4D9} = {0EA6E337-6F30-4B7D-93A1-3BF140776AF2}
+		{D768322A-5B56-4B62-B3E5-A026283C6144} = {0EA6E337-6F30-4B7D-93A1-3BF140776AF2}
+		{48BD401A-EB49-4DEB-863F-2F7D26B6A1A4} = {0EA6E337-6F30-4B7D-93A1-3BF140776AF2}
 	EndGlobalSection
 EndGlobal

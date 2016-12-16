@@ -3,3 +3,8 @@
 ################################################################################
 
 /InvoiceService/packages
+/InvoiceService/RestfulInvoiceService/bin
+/InvoiceService/RestfulInvoiceService/obj/Debug
+/InvoiceService/RestfulInvoiceService.Tests/bin/Debug
+/InvoiceService/RestfulInvoiceService.Tests/obj/Debug
+/InvoiceService/RestfulInvoiceService/RestfulInvoiceService.csproj.user
