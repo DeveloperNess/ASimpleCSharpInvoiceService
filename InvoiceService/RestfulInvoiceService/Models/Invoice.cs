@@ -19,6 +19,7 @@ namespace RestfulInvoiceService.Models
 
         public class LineItem
         {
+            public String Description { get; set; }
             public int Count { get; set; }
             public float PriceEach { get; set; }
             public float LineTotal { get; set; }    
