@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using RestfulInvoiceService.Adapters;
 using RestfulInvoiceService.Controllers;
 using RestfulInvoiceService.Models;
+using Rhino.Mocks;
 
 namespace RestfulInvoiceService.Tests.Controllers
 {
@@ -28,7 +31,7 @@ namespace RestfulInvoiceService.Tests.Controllers
                     If successful the returned data must be in the same format as the create but with the Id
                     If invoice cannot be found it must return an appropriate error
 
-            3) Retrieve by invoice nymber
+            3) Retrieve by invoice number
                     If successful the returned data must be in the same format as the create but with the Id
                     If invoice cannot be found it must return an appropriate error
 
@@ -43,7 +46,25 @@ namespace RestfulInvoiceService.Tests.Controllers
         [TestMethod]
         public void GetById()
         {
-            InvoiceController ic = new InvoiceController();
+            var invoiceStore = MockRepository.GenerateMock<IInvoiceStore>();
+
+            invoiceStore.Stub(istore => istore.FindInvoiceById(1)).Return(new Invoice()
+            {
+                Id = 1,
+                InvoiceNumber = "INV-0001",
+                LineItems = new List<Invoice.LineItem>
+                {
+                    new Invoice.LineItem
+                    {
+                        Description = "Pizza",
+                        Count = 1,
+                        PriceEach = 12.99f,
+                        LineTotal = 12.99f
+                    }
+                }
+            });
+
+            InvoiceController ic = new InvoiceController(invoiceStore);
             Invoice i = ic.Get(1);
         }
     }
